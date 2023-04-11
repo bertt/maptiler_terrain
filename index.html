@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Display a map in Cesium JS</title>
-  <script src="https://cesium.com/downloads/cesiumjs/releases/1.98/Build/Cesium/Cesium.js"></script>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Cesium.js"></script>
   <style>
-    @import url(https://cesium.com/downloads/cesiumjs/releases/1.98/Build/Cesium/Widgets/widgets.css);
+    @import url(https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Widgets/widgets.css);
     body {
       margin: 0;
       padding: 0;
@@ -42,8 +42,10 @@
       credit: new Cesium.Credit("\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e", true)
     }),
   });
+   const globe = viewer.scene.globe;
+   globe.terrainExaggeration = 5.0;
   viewer.camera.setView({
-    destination: Cesium.Cartesian3.fromDegrees(8.67, 46.72, 4500),
+    destination: Cesium.Cartesian3.fromDegrees(4.625526,52.644556, 500),
     orientation: {
       pitch: Cesium.Math.toRadians(-20)
     }
